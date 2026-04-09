@@ -27,7 +27,6 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // 🔁 Reverse safely (important for chart updates)
   const reversed = [...data].reverse();
 
   const labels = reversed.map(row => row[0]);
@@ -52,7 +51,6 @@ function App() {
     ]
   };
 
-  // 🌧️ Servo logic (same as Arduino)
   const latest = data[0];
   const servoOn = latest && latest[2] > 50;
 
@@ -69,7 +67,6 @@ function App() {
 
       <Line key={data.length} data={chartData} />
 
-      {/* 📜 RAW DATA */}
       <h3>Recent Data</h3>
       {data.map((row, i) => (
         <p key={i}>
