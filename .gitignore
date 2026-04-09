@@ -1,0 +1,4 @@
+node_modules/
+sensor_data.db
+__pycache__/
+.env
